@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "991870577816",
+    "project_id": "task-app-a95fa",
+    "storage_bucket": "task-app-a95fa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991870577816:android:aa179423df13fd5c2074ed",
+        "android_client_info": {
+          "package_name": "com.doublevision.taskapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1V7WTu0eoPhq_LMLxHQSuZegyhp3pWTg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

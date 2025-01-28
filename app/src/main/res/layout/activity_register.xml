@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="615dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RegisterActivity">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loadingAnimation"
+            android:layout_width="400.dp"
+            android:layout_height="400.dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/endereco"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:focusable="false"
+            android:padding="4.dp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_procurarcep"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/CepRegister"
+            app:layout_constraintTop_toBottomOf="@+id/CepRegister">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputEndereco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/CepRegister"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:padding="4.dp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_procurarcep"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/PasswordRegisterConfirm"
+            app:layout_constraintTop_toBottomOf="@+id/PasswordRegisterConfirm">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputCep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Digite seu Cep..."
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/PasswordRegisterConfirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="4.dp"
+            app:layout_constraintEnd_toEndOf="@+id/PasswordRegister"
+            app:layout_constraintStart_toStartOf="@+id/PasswordRegister"
+            app:layout_constraintTop_toBottomOf="@+id/PasswordRegister">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputConfirmSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password confirm..."
+                android:inputType="number|numberPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/NomeRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="16dp"
+            android:padding="4.dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome..."
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/PasswordRegister"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="4.dp"
+            app:layout_constraintEnd_toEndOf="@+id/EmailRegister"
+            app:layout_constraintStart_toStartOf="@+id/EmailRegister"
+            app:layout_constraintTop_toBottomOf="@+id/EmailRegister">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password..."
+                android:inputType="number|numberPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/EmailRegister"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="4.dp"
+            app:layout_constraintEnd_toEndOf="@+id/NomeRegister"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/NomeRegister"
+            app:layout_constraintTop_toBottomOf="@+id/NomeRegister">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email..."
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_Register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="70dp"
+            android:onClick="salvarUsuarioNovo"
+            android:text="Registrar"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/endereco"
+            app:layout_constraintStart_toStartOf="@+id/endereco"
+            app:layout_constraintTop_toBottomOf="@+id/endereco" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="202dp"
+            android:layout_height="132dp"
+            android:layout_marginTop="68dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_logo" />
+
+        <Button
+            android:id="@+id/btn_procurarcep"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:onClick="adicionaEnderecoPeloCep"
+            android:text="Procurar"
+            app:layout_constraintBottom_toBottomOf="@+id/CepRegister"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/CepRegister" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
