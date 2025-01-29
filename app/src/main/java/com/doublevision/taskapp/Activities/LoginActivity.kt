@@ -1,7 +1,6 @@
-package com.doublevision.taskapp
+package com.doublevision.taskapp.Activities
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -20,10 +19,9 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
+import com.doublevision.taskapp.R
 import com.doublevision.taskapp.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlin.coroutines.resume
@@ -41,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
         super.onStart()
         createNotificationChannel()
         if ( firebaseauth.currentUser?.uid != null){
-            startActivity(Intent(this ,MainActivity::class.java))
+            startActivity(Intent(this , MainActivity::class.java))
         }
     }
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.doublevision.taskapp
+package com.doublevision.taskapp.Activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -15,13 +15,13 @@ import com.doublevision.taskapp.Api.RetrofitHelper
 import com.doublevision.taskapp.Constants.Constants
 import com.doublevision.taskapp.Interfaces.IEnderecoAPI
 import com.doublevision.taskapp.Model.Endereco
+import com.doublevision.taskapp.R
 import com.doublevision.taskapp.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.suspendCancellableCoroutine
-import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 import kotlin.coroutines.resume
 
